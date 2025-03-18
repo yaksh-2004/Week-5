@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter </title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const { useState } = React;
+
+    function Counter() {
+      const [count, setCount] = React.useState(0);
+
+      const buttonStyle = {
+        margin: '5px',
+        padding: '10px 20px',
+        fontSize: '16px',
+      };
+
+      return React.createElement(
+        'div',
+        { style: { textAlign: 'center', marginTop: '50px' } },
+        React.createElement('h1', null, `Count: ${count}`),
+        React.createElement(
+          "button",
+          {
+            style: buttonStyle,
+            onClick: () => setCount(count + 1)
+          },
+          'Click Here to Increment'
+        ),
+        React.createElement(
+          "button",
+          {
+            style: buttonStyle,
+            onClick: () => setCount(count - 1)
+          },
+          'Click Here to Decrement'
+        ),
+        React.createElement(
+          "button",
+          {
+            style: { ...buttonStyle},
+            onClick: () => setCount(0)
+          },
+          'Reset Count'
+        )
+      );
+    }
+
+    ReactDOM.render(
+      React.createElement(Counter),
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
+
