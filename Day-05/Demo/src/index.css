@@ -1,0 +1,27 @@
+.card-section{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: 1rem;
+  gap: 2rem;
+  justify-content: center;
+  margin: 15rem auto;
+}
+
+.card{
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(88 88 88 /20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  padding: 1em 1em 1.5em;
+  border-radius: 1px solid transparent;
+}
+.details-section{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 90px;
+  font-size: 1.3rem;
+}
